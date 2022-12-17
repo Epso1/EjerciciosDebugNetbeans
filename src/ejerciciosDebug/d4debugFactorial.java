@@ -14,13 +14,13 @@ public class d4debugFactorial {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Entra numero a calcular factorial: ");
 		num = sc.nextInt();
-		fact = num;
+		fact = 1;
 		num2 = num;
-		while (num2>2) {
+		while (num2>=2) {
+                    	fact = fact * num2;
 			num2 = num2 -1;
-			fact = num * num2;			
 		}
-		System.out.print("El factorial de "+num+" es "+fact);
+		System.out.println("El factorial de "+num+" es "+fact);
 
 	}
 

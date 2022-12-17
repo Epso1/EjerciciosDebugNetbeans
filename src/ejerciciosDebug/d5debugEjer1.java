@@ -18,7 +18,7 @@ public class d5debugEjer1 {
 		System.out.print("Entra un numero entero: ");
 		String texto = sc.next();
 		boolean entero = esEntero(texto);
-		System.out.print("es el texto introducido un entero? "+entero);
+		System.out.println("es el texto introducido un entero? "+entero);
 		
 		
 		
@@ -30,10 +30,13 @@ public class d5debugEjer1 {
 		boolean respuesta = true;
 		System.out.println("texto recibido en funcion: "+str);
 		for (int i=0; i<str.length(); i++ ) {
-			if (str.charAt(i)>'0' || str.charAt(i)<'9' ) {
-				respuesta = false;
-				return respuesta;
+			if (str.charAt(i)>='0' && str.charAt(i)<='9' || str.charAt(0)=='-' || str.charAt(0)=='+') {
+                            respuesta = respuesta && true ;
+				
 			}
+                        else{
+                            respuesta = respuesta && false;
+                        }
 		}
 		
 		return respuesta;
